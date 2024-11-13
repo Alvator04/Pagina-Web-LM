@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+   <catalogo>
+       <libro>
+           <title>Odisea</title>
+           <autor>Homero</autor>
+           <year>2018</year>
+           <editorial>Catedra</editorial>
+       </libro>
+	   <libro>
+           <title>Don quijote de la Mancha</title>
+           <autor>Miguel Cervantes</autor>
+           <year>1605</year>
+           <editorial>Traficante de sueños</editorial>
+       </libro>
+	   <libro>
+           <title>Historia de dos ciudades</title>
+           <autor>Charles Dickens</autor>
+           <year>1811</year>
+           <editorial>Grijalbo</editorial>
+       </libro>
+   </catalogo>

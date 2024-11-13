@@ -1,0 +1,35 @@
+/* Estilos CSS */
+root {
+  font-family: Arial, sans-serif;
+  color: red;
+}
+catalogo {
+  background-color: #f2f2f2;
+  font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+   color: #333;
+  padding: 20px;
+}
+libro {
+	border: 1px solid #ccc;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+	margin-bottom: 15px;
+	padding: 15px;
+	Border-radius: 8px;
+  background-color: #fff;
+}
+titulo {
+	font-family: 20px, negrita;
+	color: #007bff;
+}
+autor {
+	font-family: 18px, cursiva;
+	color: #555;
+}
+year {
+	font-family: 16px;
+	color: #666;
+}
+editorial {
+	font-family: 16px;
+	color: #666;
+}
