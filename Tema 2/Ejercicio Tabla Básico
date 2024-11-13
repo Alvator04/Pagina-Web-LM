@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <tittle>TABLA DE PRUEBA</tittle>
+</head>
+<body>
+    <table border="3">
+        <tr>
+            <th>columna 1</th>
+            <td>fila 1</td>
+            <td>fila 2</td>
+        </tr>
+        <tr>
+            <th>columna 2</th>
+            <td>fila 1</td>
+            <td>fila 2</td>
+        </tr>
+
+
+    </table>
+</body>
