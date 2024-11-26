@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Página</title>
+</head>
+
+<body>
+
+<h1>Formulario de Ejemplo</h1>
+
+<form id="miFormulario">
+    <table style="background-color: #48cae4; font-family: Arial, Helvetica, sans-serif;" align="center" border="3" cellpadding="20">
+    <tr><td>
+
+    <!-- Campo de texto -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre"><br>
+
+    <!-- Checkbox -->
+    <p>
+        Dias de las semanas de trabajo:<br>
+        <label>
+            <input type="checkbox" id="terminos" name="lunes">
+            Lunes
+        </label>
+        <label>
+            <input type="checkbox" id="terminos" name="martes">
+            Martes
+        </label>
+        <label>
+            <input type="checkbox" id="terminos" name="miercoles">
+            Miércoles
+        </label>
+        <label>
+            <input type="checkbox" id="terminos" name="jueves">
+            Jueves
+        </label>
+        <label>
+            <input type="checkbox" id="terminos" name="viernes">
+            Viernes
+        </label>
+        <label>
+            <input type="checkbox" id="terminos" name="sabado">
+            Sábado
+        </label>
+        <label>
+            <input type="checkbox" id="terminos" name="domingo">
+            Domingo
+        </label>
+    </p>
+
+    <!-- Select -->
+        <label for="opciones">Color de ojos:</label>
+        <select id="opciones" name="opciones">
+            <option value="opcion1">Rojo</option>
+            <option value="opcion2">Verde</option>
+            <option value="opcion3">Azul</option>
+            <option value="opcion4">Naranja</option>
+            <option value="opcion5">Morado</option>
+            <option value="opcion6">Rosa</option>
+            <option value="opcion7">Amarillo</option>
+            <option value="opcion3">Otro</option>
+        </select><br>
+
+    <!-- Botones tipo radio -->
+        <label>Elige tu género:</label><br>
+        <label>
+            <input type="radio" name="genero" value="masculino"> Masculino
+        </label>
+        <label>
+            <input type="radio" name="genero" value="femenino"> Femenino
+        </label><br>
+
+    <!-- Botón de Borrar Datos -->
+        <button type="reset">Borrar Datos</button>
+
+    <!-- Botón para cambiar de formulario -->
+        <button type="button" onclick="irAFormulario()">Ir a otro formulario</button>
+
+    <!-- Botón para Cerrar la ventana -->
+        <button type="button" onclick="window.close()">Cerrar Ventana</button>
+
+    <!-- Botón de Enviar -->
+        <button type="submit">Enviar</button>
+    </td></tr>
+    </table>
+</form>
+
+
+</body>
+</html>
