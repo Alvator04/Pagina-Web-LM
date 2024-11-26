@@ -4,45 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Índice de Ejercicios</title>
-    <style>
+  <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
         }
         header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
+            background-color: #0077b6;
+            color: #fff;
             text-align: center;
+            padding: 8px; /* Encabezado más pequeño */
+            font-size: 1.15rem; /* Tamaño más pequeño para el encabezado */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid #00b4d8;
         }
         main {
             padding: 20px;
         }
-        h1 {
-            font-size: 2em;
+        .tema {
+            margin-top: 0; /* Eliminar espacio superior entre los temas */
+            margin-bottom: 20px;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .tema h2 {
+            background-color: #48cae4;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 0;
+            text-align: center;
+            font-size: 1.4rem;
         }
-        li {
-            margin: 10px 0;
+        .actividad {
+            background-color: #e0f7fa;
+            border: 1px solid #0077b6;
+            padding: 10px 15px; /* Reducir el padding para eliminar espacio */
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: none;
+            transition: transform 0.1s ease; /* Reducir la animación */
         }
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            font-size: 1.2em;
+        .actividad:hover {
+            transform: translateY(-2px); /* Reducir el movimiento en hover */
         }
-        a:hover {
-            text-decoration: underline;
+        .actividad h3 {
+            color: #0077b6;
+            font-size: 1.2rem;
+            margin: 0; /* Eliminar margen inferior */
+        }
+        .actividad p {
+            font-size: 1rem;
+            color: #555;
+            margin: 0; /* Eliminar margen superior e inferior */
         }
         footer {
+            background-color: #0077b6;
+            color: #fff;
             text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
+            padding: 8px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -60,23 +82,26 @@
     </header>
 
     <main>
+        <section id="tema1" class="tema">
         <h2>Ejercicios Tema 1</h2>
         <ul>
-            <li><a href="XML/Ejemplo1/nuevo1.xml" target="_blank">Ejercicio 1</a></li>
-            <li><a href="XML/Tarea2(1)/fechas.xml" target="_blank">Ejercicio 2: Parte 1</a></li>
-            <li><a href="XML/Tarea2/articulos.xml" target="_blank">Ejercicio 2: Parte 2</a></li>
-            <li><a href="XML/TareaHardware/hardwareCatalogAlvaroRodriguezMartinez.xml" target="_blank">Ejercicio 3: Catálogo 1</a></li>
-            <li><a href="XML/TareaLibros/programmingCatalogAlvaroRodriguezMartinez.xml" target="_blank">Ejercicio 3: Catálogo 2</a></li>
-            <li><a href="XML/tarea4/Actividad4.xml" target="_blank">Ejercicio 4</a></li>
+            <div class="actividad"><li><a href="XML/Ejemplo1/nuevo1.xml" target="_blank">Ejercicio 1</a></li></div>
+            <div class="actividad"><li><a href="XML/Tarea2(1)/fechas.xml" target="_blank">Ejercicio 2: Parte 1</a></li></div>
+            <div class="actividad"><li><a href="XML/Tarea2/articulos.xml" target="_blank">Ejercicio 2: Parte 2</a></li></div>
+            <div class="actividad"><li><a href="XML/TareaHardware/hardwareCatalogAlvaroRodriguezMartinez.xml" target="_blank">Ejercicio 3: Catálogo 1</a></li></div>
+            <div class="actividad"><li><a href="XML/TareaLibros/programmingCatalogAlvaroRodriguezMartinez.xml" target="_blank">Ejercicio 3: Catálogo 2</a></li></div>
+            <div class="actividad"><li><a href="XML/tarea4/Actividad4.xml" target="_blank">Ejercicio 4</a></li></div>
         </ul>
-    </main>
-     <main>
+        </section>
+        
+        <section id="tema1" class="tema">
         <h2>Ejercicios Tema 2</h2>
         <ul>
-            <li><a href="Tema 2/Ejercicio Tabla Básico.html">Ejercicio Tablas</a></li>
-            <li><a href="Tema 2/Tabla Horario.html" target="_blank">Ejercicio Horario</a></li>
-            <li><a href="Tema 2/Formulario.html" target="_blank">Formulario</a></li>
+            <div class="actividad"><li><a href="Tema 2/Ejercicio Tabla Básico.html">Ejercicio Tablas</a></li></div>
+            <div class="actividad"><li><a href="Tema 2/Tabla Horario.html" target="_blank">Ejercicio Horario</a></li></div>
+            <div class="actividad"><li><a href="Tema 2/Formulario.html" target="_blank">Formulario</a></li></div>
         </ul>
+        </section>
     </main>
 
 
