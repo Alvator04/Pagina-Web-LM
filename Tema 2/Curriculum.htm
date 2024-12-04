@@ -3,122 +3,72 @@
     <head><meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Curriculum.html</title>
-         <style>
-        /* Reseteo de márgenes y paddings */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #fdf1f1;
+                color: #333;
+            }
+            .foto img {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                margin-bottom: 15px;
+            }
+            header {
+                background-color: #b71c1c;
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                border-bottom: 4px solid #d32f2f;
+                text-align: center;
+                justify-content: space-between;
+                width: 860px;
+                padding: 10px 20px;
+                margin: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .aside {
+                background-color: #d32f2f;
+                color: #fff;
+                padding: 20px;
+                width: 30%;
+                text-align: center;
+                box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+            }
+            .main-content {
+                padding: 20px;
+                width: 70%;
+            }
+            footer {
+                background-color: #b71c1c;
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: auto;
+                width: 870px;
+                padding: 15px;
+                text-align: center;
+                box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .footer-info {
+                padding: 20px;
+                border-radius: 8px;
+                margin: 0 auto;
+                max-width: 600px;
+            }
+            header > h1 {
+                transform: scale(1.1);
+                color: #fff;
+            }
+            
+            
 
-        /* Estilos globales */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-            margin: 20px;
-        }
-
-        h1, h2, h3 {
-            color: #333;
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        /* Cabecera */
-        header {
-            text-align: center;
-            background-color: #003366;
-            color: white;
-            padding: 20px 0;
-        }
-
-        .foto img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-top: 10px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-        }
-
-        /* Sección principal */
-        .cuerpo {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .cuerpo div {
-            flex: 1 1 45%;
-            margin: 10px;
-        }
-
-        .cuerpo h2 {
-            margin-bottom: 10px;
-        }
-
-        .cuerpo ul {
-            list-style: none;
-        }
-
-        .cuerpo ul li {
-            margin-bottom: 5px;
-        }
-
-        .idiomas p, .Trabajos p {
-            margin-bottom: 8px;
-        }
-
-        /* Aside */
-        .aside {
-            margin-top: 20px;
-        }
-
-        aside {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .Formaciones, .Cualidades {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        /* Pie de página */
-        footer {
-            text-align: center;
-            background-color: #003366;
-            color: white;
-            padding: 15px 0;
-            margin-top: 20px;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer p a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        footer p a:hover {
-            text-decoration: underline;
-        }
-    </style>
+        </style>
     </head>
 <body>
     <header>
@@ -158,7 +108,7 @@
 
             <div class="Formaciones">
                 <h2>Formaciones</h2><br>
-                <p>Tecnico Superior en Desarrollo de Aplicaciones Web</p><br>
+                <p>Tecnico Superior en Desarrollo de Aplicaciones Web</p>
                 <p>Tecnico Superior en Aplicación de Sistemas Informáticos</p>
              <p>Tecnico superior de Entretenimiento Deportivo para el Ambito Infantil</p>
             </div>
@@ -175,10 +125,12 @@
         </aside>
     </section>
     <footer>
-        <p>📞 653-235-123</p>
-        <p>📧 arodmar1612@g.educaand.es</p>
-        <p>📍 Plaza Elias Ahuja<br>
-        CP 11500</p>
+        <section class="footer-info">
+            <p>📞 653-235-123</p>
+            <p>📧 arodmar1612@g.educaand.es</p>
+            <p>📍 Plaza Elias Ahuja<br>
+            CP 11500</p>
+        </section>
     </footer>
 
 </body>
