@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <style>
+        /* Estilos para la calculadora */
+        body {
+            font-family: Arial, sans-serif;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(5, 100px);
+            gap: 20px;
+
+        }
+
+        .calculator input {
+            grid-column: span 4;
+            padding: 20px;
+            font-size: 24px;
+            text-align: right;
+            border: none;
+            border-radius: 5px;
+            background-color: #a7a7a7;
+        }
+
+        .boton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <input id="display" type="text" disabled />
+        <boton class="boton" >7</boton>
+        <boton class="boton" >8</boton>
+        <boton class="boton" >9</boton>
+        <boton class="boton" >+</boton>
+        <boton class="boton" >4</boton>
+        <boton class="boton" >5</boton>
+        <boton class="boton" >6</boton>
+        <boton class="boton" >-</boton>
+        <boton class="boton" >1</boton>
+        <boton class="boton" >2</boton>
+        <boton class="boton" >3</boton>
+        <boton class="boton" >*</boton>
+        <boton class="boton" >0</boton>
+        <boton class="boton" >C</boton>
+        <boton class="boton" >=</boton>
+        <boton class="boton" >/</boton>
+    </div>
+
+</body>
+</html>
