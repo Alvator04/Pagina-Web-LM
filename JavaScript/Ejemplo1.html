@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumatorio de Números</title>
+    <style>
+        /* Estilo general de la página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+            max-width: 90%;
+        }
+
+        /* Título */
+        h1 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo del botón */
+        button {
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Estilo del resultado */
+        #resultado {
+            font-size: 18px;
+            color: #27ae60;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sumatorio de 100 Números Aleatorios</h1>
+        <button onclick="calcularSuma()">Calcular Suma</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcularSuma() {
+            // Crear un vector con 100 números aleatorios entre 1 y 100
+            let vector = [];
+            for (let i = 0; i < 100; i++) {
+                vector.push(Math.floor(Math.random() * 100) + 1); // Número aleatorio entre 1 y 100
+            }
+
+            // Calcular la suma de los números del vector
+            let suma = vector.reduce((acc, num) => acc + num, 0);
+
+            // Mostrar el resultado en la página
+            document.getElementById("resultado").innerText = "La suma de los 100 números es: " + suma;
+        }
+    </script>
+</body>
+</html>
