@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Pares e Impares</title>
+    <style>
+        /* Estilo general de la página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+            max-width: 90%;
+        }
+
+        /* Título */
+        h1 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo del botón */
+        button {
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Estilo de los resultados */
+        #resultado {
+            font-size: 18px;
+            color: #27ae60;
+            margin-top: 20px;
+        }
+
+        /* Estilo del mensaje de error */
+        #error {
+            font-size: 16px;
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contador de Pares e Impares</h1>
+        <label for="numero">Introduce un número:</label>
+        <input type="text" id="numero" placeholder="Escribe un número">
+        <button onclick="agregarNumero()">Agregar Número</button>
+        <p id="resultado"></p>
+        <p id="error"></p>
+    </div>
+
+    <script>
+        let numeros = [];  // Arreglo para almacenar los números
+
+        function agregarNumero() {
+            const input = document.getElementById('numero');
+            let valor = input.value;
+            let numero = parseInt(valor);
+
+            // Comprobar si el valor es válido (es un número o no es igual a 0)
+            if (isNaN(numero) || numero === 0) {
+                if (numeros.length > 0) {
+                    mostrarResultado();
+                }
+                input.disabled = true;  // Deshabilitar el campo de entrada
+                document.querySelector('button').disabled = true;  // Deshabilitar el botón
+                document.getElementById('error').innerText = "Entrada terminada, se mostrará el resultado.";
+                return;
+            }
+
+            // Agregar el número al arreglo
+            numeros.push(numero);
+            input.value = '';  // Limpiar el campo de entrada
+            input.focus();  // Focalizar nuevamente el campo de entrada
+            document.getElementById('error').innerText = '';  // Limpiar cualquier mensaje de error
+        }
+
+        function mostrarResultado() {
+            const pares = numeros.filter(num => num % 2 === 0).length;
+            const impares = numeros.length - pares;
+            document.getElementById('resultado').innerText = 
+                `El arreglo de números es: [${numeros.join(', ')}]\n` + 
+                `Hay ${pares} números pares y ${impares} números impares.`;
+        }
+    </script>
+</body>
+</html>
