@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de gestor_vectores</title>
+</head>
+<body>
+
+    <h2>Calculadora de Vectores</h2>
+
+    <input type="number" id="numero">
+
+    <button onclick="agregarNumero()">Agregar</button>
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="valores"></p>
+    <p id="resultado"></p>
+
+    <script>
+        "use strict"
+
+        let gestor_vectores = {
+            vector_numeros: [],
+
+            setDatos: function(vector) {
+                this.vector_numeros = vector;
+            },
+            // Funcion de la suma
+            getSuma: function() {
+                let suma = 0;
+                for (let pos in this.vector_numeros) {
+                    suma += this.vector_numeros[pos];
+                }
+                return suma;
+            },
+            // Funcion de la multiplicacion
+            getMax: function() {
+                let max = this.vector_numeros.length > 0 ? this.vector_numeros[0] : 0;
+                for (let pos in this.vector_numeros) {
+                    if (this.vector_numeros[pos] > max) {
+                        max = this.vector_numeros[pos];
+                    }
+                }
+                return max;
+            },
+            // Funcion del minimo
+            getMin: function() {
+                let min = this.vector_numeros.length > 0 ? this.vector_numeros[0] : 0;
+                for (let pos in this.vector_numeros) {
+                    if (this.vector_numeros[pos] < min) {
+                        min = this.vector_numeros[pos];
+                    }
+                }
+                return min;
+            },
+            // Funcion del maximo
+            getMultiplicacion: function() {
+                let multiplicacion = 1;
+                for (let pos in this.vector_numeros) {
+                    multiplicacion *= this.vector_numeros[pos];
+                }
+                return multiplicacion;
+            },
+            // Funcion de cantidad de números impares
+            getImpar: function() {
+                let impar = 0;
+                for (let pos in this.vector_numeros) {
+                    if (this.vector_numeros[pos] % 2 != 0) {
+                        impar = impar + 1;
+                    }
+                }
+                return impar;
+            }
+        };
+
+        // Función para agregar números
+        function agregarNumero() {
+            let num = parseFloat(document.getElementById("numero").value);
+            if (!isNaN(num)) {
+                gestor_vectores.vector_numeros.push(num);
+                document.getElementById("valores").innerText = "Números: " + gestor_vectores.vector_numeros.join(", ");
+                document.getElementById("numero").value = "";
+            }
+        }
+
+        // Función para calcular valores
+        function calcular() {
+            if (gestor_vectores.vector_numeros.length === 0) return;
+
+            let suma = gestor_vectores.getSuma();
+            let max = gestor_vectores.getMax();
+            let min = gestor_vectores.getMin();
+            let mult = gestor_vectores.getMultiplicacion();
+            let imp = gestor_vectores.getImpar();
+
+            document.getElementById("resultado").innerHTML =
+                "Suma: " + suma + "<br>" +
+                "Multiplicación: " + mult + "<br>" +
+                "Máximo: " + max + "<br>" +
+                "Mínimo: " + min + "<br>" +
+                "Los impares son: " + imp;
+        }
+    </script>
+
+</body>
+</html>
